@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+  
+  <!--==============================================================================-->
+  <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://fonts.googleapis.com/css?family=Mitr' rel='stylesheet'>
+    <title>MI PRIMERA WEB</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 100%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <!--==============================================================================-->
+  
+  <!--==============================================================================-->
+  <body>
+
+
+    <h1>
+      SEARCH YOUR FUTURE PLACE
+    </h1>
+
+    <!--==============================================================================-->
+    <div class = "container" style = "padding:0px; width:150%;">
+      
+      <!--==============================================================================-->
+      <div class = "row">
+
+        <!--==============================================================================-->
+        <div id="panel" class="col-lg-4">
+          <table>
+
+
+
+            <!--==============================================================================-->
+            <tr>
+                <!-- label APARTAMENTOS EN CONSTRUCCIÓN -->
+                <td>
+                    <label for="">
+                        <strong>
+                            Futuros
+                            Apartamentos--> 
+                        </strong>
+                    </label>
+                </td>
+
+                <!-- ENTRADA DE EL PRECIO DE BUSCADO -->
+                
+
+                 <!-- BOTON VER PRECIOS-->
+                 <td>
+                    <button id="apartamentos" class="btn btn-primary btn-sm">
+                        VER
+                    </button>
+                </td>
+
+                <!-- BOTON BORRAR PRECIOS-->
+                <td>
+                    <button id = "borrar_apartamentos" class="btn btn-danger btn-sm">
+                        BORRAR
+                    </button>
+                </td>
+            </tr>
+            <!--==============================================================================-->
+
+
+
+            <!--==============================================================================-->
+            
+            <!--==============================================================================-->
+
+
+
+            <!--==============================================================================-->
+            <tr>
+                <!-- label VACUNACÓN CONTRA LA GRIPE -->
+                <td>
+                    <label for="">
+                        <strong>
+                            Vacunacion(Gripe) -->  
+                        </strong>
+                    </label>
+                </td>
+                
+                <!-- ENTRADA DE KILOMETROS A LA REDONDDA DONDE 
+                    OBERVAR LAS POSIBLES OPCIONES -->
+                
+
+                <!-- BOTON VER ZONAS-->
+                <td>
+                    <button id="vacunas" class="btn btn-primary btn-sm">
+                        VER
+                    </button>
+                </td>
+
+                <!-- BOTON BORRAR ZONAS-->
+                <td>
+                    <button id="borrar_vacunas"  class="btn btn-danger btn-sm">
+                        BORRAR
+                    </button>
+                </td>
+            </tr>
+            <!--==============================================================================-->
+
+
+
+            <!--==============================================================================-->
+            <tr>
+                <!-- label FERIAS AGRÍCOLAS -->
+                <td>
+                    <label for="">
+                        <strong>
+                            Ferias Agricolas -->  
+                        </strong>
+                    </label>
+                </td>
+                
+                <!-- ENTRADA DE KILOMETROS A LA REDONDDA DONDE 
+                    OBERVAR LAS POSIBLES OPCIONES -->
+                
+                <!-- BOTON VER ZONAS-->
+                <td>
+                    <button id="ferias" class="btn btn-primary btn-sm">
+                        VER
+                    </button>
+                </td>
+
+                <!-- BOTON BORRAR ZONAS-->
+                <td>
+                    <button id="borrar_ferias"  class="btn btn-danger btn-sm">
+                        BORRAR
+                    </button>
+                </td>
+            </tr>
+            <!--==============================================================================-->
+
+
+
+            <!--==============================================================================-->
+            <tr>
+                <!-- label CAJEROS DEL ESTADO -->
+                <td>
+                    <label for="">
+                        <strong>
+                            Cajeros (Estado) -->  
+                        </strong>
+                    </label>
+                </td>
+                
+                <!-- ENTRADA DE KILOMETROS A LA REDONDDA DONDE 
+                    OBERVAR LAS POSIBLES OPCIONES -->
+                
+                <!-- BOTON VER ZONAS-->
+                <td>
+                    <button id="cajeros" class="btn btn-primary btn-sm">
+                        VER
+                    </button>
+                </td>
+
+                <!-- BOTON BORRAR ZONAS-->
+                <td>
+                    <button id="borrar_cajeros" class="btn btn-danger btn-sm">
+                        BORRAR
+                    </button>
+                </td>
+            </tr>
+            <!--==============================================================================-->
+
+            <!--==============================================================================-->
+            <tr>
+                <!-- label INCIDENTES EN COLEGIOS -->
+                <td>
+                    <label for="">
+                        <strong>
+                            Incidentes(Colegios) -->  
+                        </strong>
+                    </label>
+                </td>
+                
+                <!-- ENTRADA DE KILOMETROS A LA REDONDDA DONDE 
+                    OBERVAR LAS POSIBLES OPCIONES -->
+                
+
+                <!-- BOTON VER ZONAS-->
+                <td>
+                    <button id="incidentes" class="btn btn-primary btn-sm">
+                        VER
+                    </button>
+                </td>
+
+                <!-- BOTON BORRAR ZONAS-->
+                <td>
+                    <button id="borrar_incidentes" class="btn btn-danger btn-sm">
+                        BORRAR
+                    </button>
+                </td>
+            </tr>
+            <!--==============================================================================-->
+            
+
+
+
+          </table>
+        </div>
+        <!--==============================================================================-->   
+
+      </div>
+      <!--==============================================================================-->
+    
+    </div>
+    <!--==============================================================================-->
+
+
+    <!--==============================================================================-->
+    <!-- CARGAR EL MAPA -->
+    <div id="map"></div>
+    <script>
+      var map;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: 40.7291, lng: -73.9965},
+          zoom: 18
+        });
+      }
+    </script> 
+    <script
+    src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script>
+    <!--.................................................. -->
+    <!-- Custom Js ....................................... -->
+    <script type="text/javascript" src="index.js"></script>
+    <!--.................................................. -->
+    <!-- Google Map ...................................... -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBciy5QDrNH-CzA3kfhvAL8MHHTFpVb6hw&callback=initMap"
+    async defer></script>
+    <!--==============================================================================-->
+  </body>
+  <!--==============================================================================-->
+</html>
